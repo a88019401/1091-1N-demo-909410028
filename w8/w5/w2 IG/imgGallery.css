@@ -1,0 +1,26 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#id909410028 {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#id909410028 img {
+  width: 15%;
+  margin: 1.5%;
+}
+
+p {
+  text-transform: uppercase;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 100px;
+  font-weight: 600;
+  border-bottom: 10px solid rgb(200, 235, 135);
+  padding-bottom: 30px;
+  width: 15%;
+  margin: 1.5%;
+}
