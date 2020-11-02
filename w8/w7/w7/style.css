@@ -310,6 +310,7 @@ ul {
       padding: 30px;
       border-bottom: 2px black;
       transform: translateX(-500px);
+      transition: transform 0.5s ease-in-out;
   }
   
   .main-nav .main-menu.show{
