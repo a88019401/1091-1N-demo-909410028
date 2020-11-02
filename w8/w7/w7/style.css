@@ -157,7 +157,7 @@ ul {
   font-weight: bold;
   text-transform: uppercase;
   background-color: #fff;
-  margin-left: -19px;
+  margin-left: 0px;
 }
 /* 考試會考 */
 @media (max-width: 700px){
