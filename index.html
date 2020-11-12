@@ -1,23 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!--navbar和home參考https://www.youtube.com/watch?v=tcskp-ncN0I&list=WL&index=7&t=274s-->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>109-1 Class Demo</title>
-    <link rel="stylesheet" href="./w3 div/div.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<!-- Load font awesome icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   </head>
   <body>
-    <div class="container">
-      <ul>
-        <li><a href="./w1 intro/W1 INTRO.html"> W1: Introducction</a></li>
-        <li><a href="./w1 poke/pokeman.html"> W1: Pokemon</a></li>
-        <li><a href="./w2 IG/image.html"> W2: Image Gallery</a></li>
-        <li><a href="./w2 blog/blog.html"> W2: Blog</a></li>
-        <li><a href="./w3 div/div.html"> W3: Div</a></li>
-        <li><a href="./w3 divtku/divtku60.html"> W3: Div tku_60</a></li>
-        <li><a href="./w4/divtku60.html"> W4: Div tku_60+js</a></li>
-        <li><a href="./w5/NAVBAR.HTML"> W5: Bootstrap</a></li>
-      </ul>
+    <nav class="navbar">
+      <div class="width">
+        <div class="logo"><a href="index.html">靜態網頁設計<span>Midterm-Project</span></a></div>
+        <ul class="menu">
+          <li><a href="#"> 週作業</a>
+            <ul>
+              <li><a href="/w1 intro/W1 INTRO.html"> W1: Introducction</a></li>
+              <li><a href="/w1 poke/pokeman.html"> W1: Pokemon</a></li>
+              <li><a href="/w2 IG/image.html"> W2: Image Gallery</a></li>
+              <li><a href="/w2 blog/blog.html"> W2: Blog</a></li>
+              <li><a href="/w3 div/div.html"> W3: Div</a></li>
+              <li><a href="/w3 divtku/divtku60.html"> W3: Div tku_60</a></li>
+              <li><a href="/w4/divtku60.html"> W4: Div tku_60+js</a></li>
+              <li><a href="/w5/NAVBAR.HTML"> W5: Bootstrap</a></li>
+              <li><a href="/w8/nav.html"> w6~8</a></li>
+            </ul>
+        </li>
+          <li><a href="/p1/myclass_028.html"> 課表</a></li>
+          <li><a href="/CV/index.html"> 履歷</a></li>
+          <li><a href="#ref"> 自學部分</a></li>
+          <li><a href="#rg"> project說明</a></li>
+        </ul>
+      </div>
+    </nav>
+        <!-- 頁面 -->
+    <section class="home" id="home">
+        <div class="width">
+            <div class="home-content">
+                <div class="text1">嗨，我是張祐豪</div>
+                <div class="text2">這是我的<span>期中作業</span></div>
+              </div>
+          </div>
+    </section>
+    <section id="ref">
+      <div class="content1">
+          <h2>自學部分</h2>
+          <p>1. 使ul的nav出現子選單</p>
+          <p>2. 履歷表製作</p>
+          <p>3. 簡單學習JQuery的使用</p>
+          <p>4. Google fonts的應用 </p>
+      </div>
+  </section>
+  <section id="rg">
+    <div class="content2">
+        <h2>Project說明</h2>
+        <p>基本上全部的連結都可以互通，如果時間允許我會把它做得更完美，無奈本身工作剛好碰到旺季，只能每天抽空一兩個小時打CODE，時常有打了一整天，但是完全沒有結果的情況發生，</P>
+        <P>自己想到效果做不太出來，大多依賴網路上的教學去學習自己想要的效果。在製作過程中會發現一些有趣的點，例如像是首頁的nav position設fixed，<br>但是套用在其他網頁時要改成relative要不然會多一部份白白的邊框，大部分都要小修一下，大致上就這樣。 </p>
+        <p>【學號909410028 張祐豪】</p>
     </div>
-  </body>
+</section>
+      </body>
 </html>

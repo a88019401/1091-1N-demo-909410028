@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;900&family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@500;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+a {
+    color:black;
+}
+.width{
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+/* navbat 樣式*/
+.navbar{
+    background: rgb(3, 10, 10);
+    position: fixed;
+    width: 100%;
+    padding: 15px 0;
+    font-family: 'Ubuntu', sans-serif;
+}
+.navbar .width{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .logo a{
+    color: #fff;
+    font-size: 35px;
+    font-weight: 600;
+}
+.navbar .menu li{
+    list-style: none;
+    display: inline-block;
+    background: rgb(3, 10, 10);
+    }
+.navbar .menu li a{
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: all 0.5s ease;
+}
+.navbar .menu li a:hover{
+    color: crimson;
+}
+.navbar .logo a span{
+    color: crimson;
+    transition: all 0.3s ease;
+}
+
+.navbar .menu li ul{
+    position: absolute;
+    top: 70px;
+    opacity: 0;
+    visibility: hidden;
+    transition: top .3s;
+}
+.navbar .menu li:hover > ul{
+    top: 50px;
+    opacity: 1;
+    visibility: visible;
+}
+.navbar .menu li ul li{
+    position: relative;
+    margin: 0px;
+    width: 300px;
+    float: none;
+    display: list-item;
+    border-bottom: 1px solid rgba(red);
+}
+.navbar .menu li ul li a{
+color: #fff;
+font-size: 15px;
+font-weight: 500;
+margin-left: 25px;
+transition: all 0.5s ease;
+}
+
+/* home section styling */
+.home{
+    display: flex;
+    background: url("jimmy.jpg") no-repeat center;
+    height: 100vh;
+    color: rgb(12, 11, 11);
+    min-height: 500px;
+    background-size: cover;
+    background-attachment: local;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+.home .width{
+    margin: auto 0 auto 100px;
+}
+.home .home-content .text1{
+    font-size: 47px;
+}
+.home .home-content .text2{
+    font-size: 75px;
+    font-weight: 600;
+    margin-left: -3px;
+}
+
+.home .home-content .text2 span{
+    color: crimson;
+}
+.home .home-content a{
+    display: inline-block;
+    background: crimson;
+    color: #fff;
+    font-size: 25px;
+    padding: 12px 36px;
+    margin-top: 20px;
+    font-weight: 400;
+    border-radius: 6px;
+    border: 2px solid crimson;
+    transition: all 0.3s ease;
+}
+.home .home-content a:hover{
+    color: crimson;
+    background: none;
+}
+
+.xbox{
+    width: 100%;
+    height: 350px;
+    background: url('./ms_img/img/xbox.png') no-repeat center center/cover;
+    margin-bottom: 20px;
+  }
+  
+  .xbox .content {
+    width: 40%;
+    padding: 70px 0 0 30px;
+  }
+  
+  .xbox p{
+    margin: 10px 0 20px ;
+  }
+  
+/* Link */
+
+#ref,#rg{
+    background: #f2f2f2;
+    color: #616161;
+    font-size: 12px;
+    padding:35px 0 ;
+  }
+  
+#ref,#rg{
+    display: relative;
+    grid-gap: 10px;
+    justify-content: center;
+  }
+  
+#ref,#rg{
+    line-height: 2.8;
+  }
