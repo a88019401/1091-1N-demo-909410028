@@ -1,0 +1,153 @@
+// Text Styles
+.x-large {
+  font-size: 4rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.large {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.lead {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+// Backgrounds
+.bg {
+  &-primary {
+    @include set-background($primary-color);
+  }
+  &-dark {
+    @include set-background($dark-color);
+  }
+  &-light {
+    @include set-background($light-color);
+  }
+  &-danger {
+    @include set-background($danger-color);
+  }
+  &-success {
+    @include set-background($success-color);
+  }
+  &-white {
+    @include set-background(#fff);
+    border: #ccc 1px solid;
+  }
+}
+
+// Buttons
+.btn {
+  display: inline-block;
+  background: $light-color;
+  color: #333;
+  padding: 0.4rem 1.3rem;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-right: 0.5rem;
+  transition: all 0.2s ease-in;
+
+  &.btn-primary {
+    @include set-background($primary-color);
+    &:hover {
+      background: lighten($primary-color, 5%);
+    }
+  }
+  &.btn-outline-primary{
+    @include set-outline-color($primary-color)
+    &:hover {
+      @include set-outline-hover($primary-color);
+    }
+  }
+
+  &.btn-dark {
+    @include set-background($dark-color);
+    &:hover {
+      background: lighten($dark-color, 5%);
+      color: #fff;
+    }
+  }
+
+  &.btn-light {
+    @include set-background($light-color);
+    &:hover {
+      background: lighten($dark-color, 20%);
+      color: #fff;
+    }
+  }
+
+  &.btn-danger {
+    @include set-background($danger-color);
+    &:hover {
+      background: lighten($danger-color, 20%);
+      color: #fff;
+    }
+  }
+
+  &.btn-outline-danger{
+    @include set-outline-color($danger-color)
+    &:hover {
+      @include set-outline-hover($danger-color);
+    }
+  }
+
+  &.btn-success {
+    @include set-background($success-color);
+    &:hover {
+      background: lighten($success-color, 20%);
+      color: #fff;
+    }
+  }
+
+  &.btn-outline-success{
+    @include set-outline-color($success-color)
+    &:hover {
+      @include set-outline-hover($success-color);
+    }
+  }
+
+  
+  &.btn-dark {
+    @include set-background($dark-color);
+    &:hover {
+      background: lighten($dark-color, 20%);
+      color: #fff;
+    }
+  }
+
+  &.btn-outline-dark{
+    @include set-outline-color($dark-color)
+    &:hover {
+      @include set-outline-hover($dark-color);
+    }
+  }
+
+  
+  /* &.btn-light {
+    @include set-background($light-color);
+    &:hover {
+      background: lighten($light-color, 5%);
+      color: #fff;
+    }
+  }*/
+
+  &.btn-outline-light{
+    @include set-outline-color($light-color)
+    &:hover {
+      @include set-outline-hover($light-color);
+      color: #333333;
+    }
+  }
+}
+
+.dark-overlay {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}

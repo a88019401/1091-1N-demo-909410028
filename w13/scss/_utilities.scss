@@ -1,0 +1,147 @@
+//text styles
+.x-large{
+    font-size:4rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+.large{
+    font-size:3rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+.lead{
+    font-size:1.5rem;
+    margin-bottom:1rem;
+}
+// backgrounds
+.bg{
+    &-light{
+        @include set-background($light-color);
+    }
+    &-primary{
+        @include set-background($primary-color);
+    }
+    &-dark{
+        @include set-background($dark-color);
+    }
+    &-danger{
+        @include set-background($danger-color);
+    }
+    &-success{
+        @include set-background($success-color);
+    }
+    &-whit{
+        @include set-background(#ffffff);
+        border: #cccccc 1px solid;
+    }
+    &-orange{
+        @include set-background($orange-color);
+    }
+    &-black{
+        @include set-background($black-color);
+    }
+}
+//buttons
+.btn{
+    display: inline-block;
+    background: $light-color;
+    color: #333;
+    padding: 0.4rem 1.3rem; //boxes become big
+    cursor:pointer; //effective
+    font-size: 1rem;
+    margin-right: 0.5rem;
+    transition: all 0.2s ease-in;
+    &.btn-primary{
+        color: #ffffff;
+        @include set-background($primary-color);
+        //background-color:$primary-color;
+        &:hover{
+            background:lighten($primary-color, 5%);
+            color: #ffffff;
+        }
+    }
+    
+    &.btn-success{
+        border:2px solid;
+        color: $success-color;
+        border-radius: 10%;
+        @include set-background($light-color);
+        //background-color: $light-color;
+        &:hover{
+            background:lighten($success-color, 20%);
+            color: #ffffff;
+        }
+    }
+    &.btn-light{
+        @include set-background($light-color);
+        //background-color: $light-color;
+        &:hover{
+            background:lighten($dark-color, 5%);
+            color: #ffffff;
+        }
+    }
+    &.btn-danger{
+        
+        border:2px solid;
+        color: $danger-color;
+        border-radius: 10%;
+        @include set-background($light-color);
+        //background-color: $light-color;
+        &:hover{
+            background:lighten($danger-color, 5%);
+            color: #ffffff;
+        }
+    }
+    &.btn-dark{
+        border:2px solid;
+        color:$dark-color;
+        border-radius: 10%;
+        @include set-background($light-color);
+        //background-color: $light-color;
+        &:hover{
+            background:lighten($dark-color, 5%);
+            color: #ffffff;
+        }
+    }
+    &.btn-success{
+        border:2px solid;
+        color: $success-color;
+        border-radius: 10%;
+        @include set-background($light-color);
+        //background-color: $light-color;
+        &:hover{
+            background:lighten($success-color, 20%);
+            color: #ffffff;
+        }
+    }
+    &.btn-black{
+        border:2px solid;
+        color: $black-color;
+        border-radius: 10%;
+        @include set-background($light-color);
+        //background-color: $light-color;
+        &:hover{
+            background:lighten($black-color, 20%);
+            color: #ffffff;
+        }
+    }
+    &.btn-orange{
+        border:2px solid;
+        color: $orange-color;
+        border-radius: 10%;
+        @include set-background($light-color);
+        //background-color: $light-color;
+        &:hover{
+            background:lighten($orange-color, 20%);
+            color: #ffffff;
+        }
+    }
+}
+.dark-overlay{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.7);
+}

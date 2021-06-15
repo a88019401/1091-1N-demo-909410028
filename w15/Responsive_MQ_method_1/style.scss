@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css?family=Ibarra+Real+Nova:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Archivo+Narrow&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Ibarra Real Nova', serif;
+    background-color: #f9f2f2;
+    font-size: 1.2em; //em is looking for now or last list
+}
+@mixin setDisplayWidth($width){
+    
+    width: width; //為了響應式而設定
+    margin: 0 auto; //為了響應式而設定
+}
+@mixin customShadow($size){ //抬頭第一個
+    box-shadow: -$size $size 0 0 rgba(0,0,0,0.2);
+    border: 2px solid rgba(0,0,0,0.6);
+}
+header{
+    display: grid;
+    padding: 20px 0;
+    @include setDisplayWidth(95%);
+    .logo{
+        display: flex;
+        justify-content: center; //水平對中
+        align-content: center;//垂直對中
+        font-family: 'Archivo Narrow';
+        div{
+            font-size: 1em;
+            color: #000;
+            background: #fff;
+            padding: 5px 8px;
+            @include customShadow(3px); //要先加這個才能和minx
+        }
+    }
+    
+    nav{
+        ul {
+           display: flex;
+           justify-content: center;
+           align-content: center;
+           list-style: none;
+          li{
+            padding: 20px 12px; //20 上下 12左右
+            // 沒影響 align-content: center; //對中
+        }
+    }
+    }
+    .search{
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
+}
+section.articles {
+    display: grid;
+    grid-gap: 2em;
+    @include setDisplayWidth(95%);
+    article{
+        @include customShadow(3px);
+        img{
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+//Tablet Portrait
+@media screen and (min-width: 768px){
+    header{
+    grid-template-columns: 1fr 1fr 1fr;  //不要用repeat寫 會瀏覽器相衝
+    .logo{
+        justify-self: start;
+        }
+    }
+    section.articles{ //變成兩張圖
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    section.articles{ //變成兩張圖
+        grid-template-columns: 1fr 1fr 1fr; //3個
+    }
+}
+
+@media screen and (min-width: 1224px){
+    section.articles{ //變成四張圖
+        grid-template-columns: 1fr 1fr 1fr 1fr; //4個
+    }
+}
+@media screen and (min-width: 1824px){
+    section.articles{ //變成六張圖
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; //6個
+    }
+}

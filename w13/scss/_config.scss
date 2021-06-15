@@ -1,0 +1,26 @@
+// _config.scss
+
+$primary-color: #17a2b8;
+$dark-color: #343a40;
+$light-color: #f4f4f4;
+$danger-color: #dc3545;
+$success-color: #28a745;
+$max-width: 1100px;
+$orange-color:rgb(248, 142, 21);
+$black-color:black;
+
+@function set-text-background($color){
+    @if (lightness($color) > 60 ) {
+        @return #333;
+    }   @else {
+        @return #fff;
+    }
+}
+
+
+
+// set background & text color
+@mixin set-background($color){
+    background-color: $color;
+    color:set-text-color($color);
+}

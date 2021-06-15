@@ -1,0 +1,351 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans Condensed';
+  padding: 20px 40px;
+}
+
+a {
+  text-decoration: none;
+  /*裝飾拿掉*/
+  color: black;
+}
+
+/*Header*/
+.header {
+  height: 70px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header .logo-container {
+  height: 100%;
+  width: 70px;
+  padding: 25px;
+}
+
+.header .options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 50%;
+  height: 100%;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header .options .option {
+  /*設定間格*/
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.header .options .cart-icon {
+  width: 45px;
+  height: 45px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  /*水平對中*/
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /*垂直對中*/
+  cursor: pointer;
+}
+
+.header .options .cart-icon .shopping-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.header .options .cart-dropdown {
+  position: absolute;
+  /*跟著options跑*/
+  width: 340px;
+  height: 460px;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  top: 90px;
+  right: 40px;
+  padding: 20px;
+  background-color: white;
+  border: 1px solid black;
+}
+
+.header .options .cart-dropdown.show {
+  /*用來控制滑鼠跑出來的東西*/
+  display: block;
+}
+
+.header .options .cart-dropdown .cart-items {
+  height: 340px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow: scroll;
+}
+
+.header .options .cart-dropdown .cart-items .cart-item {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 80px;
+  margin-bottom: 10px;
+}
+
+.header .options .cart-dropdown .cart-items .cart-item img {
+  width: 30%;
+}
+
+.header .options .cart-dropdown .cart-items .cart-item .item-details {
+  width: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 10px 20px;
+}
+
+.header .options .cart-dropdown .cart-items .cart-item .item-details .name {
+  font-size: 10px;
+  margin-bottom: 10px;
+}
+
+.header .options .cart-dropdown .custom-button {
+  width: 100%;
+  height: 40px;
+  background-color: black;
+  color: white;
+  margin: 40px auto;
+}
+
+.header .options .cart-dropdown .custom-button:hover {
+  background-color: lightcyan;
+  color: black;
+}
+
+.homepage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /*水平對中*/
+}
+
+.directory-menu {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.directory-menu .menu-item {
+  width: 30%;
+  height: 240px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  /*垂直對中*/
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /*水平對中*/
+  overflow: hidden;
+  margin: 7px;
+  border: 1px solid black;
+}
+
+.directory-menu .menu-item:hover {
+  cursor: pointer;
+  /*鼠標設定圖案*/
+}
+
+.directory-menu .menu-item:hover .background-image {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  /*下方transition為動畫控制*/
+  -webkit-transition: -webkit-transform 6s cubic-bezier(0.25, 0.46, 0.45, 0.9);
+  transition: -webkit-transform 6s cubic-bezier(0.25, 0.46, 0.45, 0.9);
+  transition: transform 6s cubic-bezier(0.25, 0.46, 0.45, 0.9);
+  transition: transform 6s cubic-bezier(0.25, 0.46, 0.45, 0.9), -webkit-transform 6s cubic-bezier(0.25, 0.46, 0.45, 0.9);
+}
+
+.directory-menu .menu-item:hover .content {
+  opacity: 0.9;
+  /*透明度*/
+}
+
+.directory-menu .menu-item.large {
+  height: 320px;
+}
+
+.directory-menu .menu-item .background-image {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.directory-menu .menu-item img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 240px;
+}
+
+.directory-menu .menu-item .content {
+  height: 90px;
+  border: 1px solid black;
+  padding: 0 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /*設成flex box*/
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  /*垂直對中*/
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /*水平對中*/
+  position: absolute;
+  /*絕對位置*/
+  background-color: white;
+  opacity: 0.5;
+}
+
+.directory-menu .menu-item .content .title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #4a4a4a;
+}
+
+.directory-menu .menu-item .content .subtitle {
+  font-size: 14px;
+  font-weight: lighter;
+  /*顏色淡一點*/
+  color: #4a4a4a;
+}
+
+.Shop-page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /*水平對中*/
+}
+
+.title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  /*垂直對中*/
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /*水平對中*/
+  margin: 25px;
+}
+
+.items {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.items .collection-item {
+  margin: 7px;
+  border: 1px solid black;
+}
+
+.items .collection-item .image {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.items .collection-item .custom-button {
+  height: 50px;
+  width: 150px;
+  border: 1px solid black;
+  background-color: white;
+  opacity: 0.5;
+  background-position: center;
+}
+
+.items .collection-item .collection-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+/*# sourceMappingURL=style.css.map */

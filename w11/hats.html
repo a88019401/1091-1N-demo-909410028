@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="header">
+        <a href="./index.html" class="logo-container">
+            <img src="./assets/crown.svg" alt="">
+        </a>
+        <div class="options">
+            <a href="./overview.html" class="option">Shop</a>
+            <a href="./contact.html" class="option">Contact</a>
+            <a href="#" class="option">Sign In</a>
+            <div class="cart-icon" onclick="cartToggle()">
+                <img src="./assets/shopping-bag.svg" alt="" class="shopping-icon">
+            </div>
+            <div class="cart-dropdown">
+                <div class="cart-items">
+                    <div class="cart-item">
+                        <img src="https://i.ibb.co/ZYW3VTp/brown-brim.png" alt="">
+                        <div class="item-details">
+                            <span class="name">Brown Brim</span>
+                            <span class="price">4 * 25</span>
+                        </div>
+                    </div>
+                    <div class="cart-item">
+                        <img src="https://i.ibb.co/XzcwL5s/black-shearling.png" alt="">
+                        <div class="item-details">
+                            <span class="name">Black Jean Shearling</span>
+                            <span class="price">4 * 125</span>
+                        </div>
+                    </div>
+                    <div class="cart-item">
+                        <img src="https://i.ibb.co/0s3pdnc/adidas-nmd.png" alt="">
+                        <div class="item-details">
+                            <span class="name">Adidas NMD</span>
+                            <span class="price">2 * 220</span>
+                        </div>
+                    </div>
+                    <div class="cart-item">
+                        <img src="https://i.ibb.co/7CQVJNm/blue-tank.png" alt="">
+                        <div class="item-details">
+                            <span class="name">Blue Tanktop</span>
+                            <span class="price">2 * 25</span>
+                        </div>
+                    </div>
+                    <div class="cart-item">
+                        <img src="https://i.ibb.co/xJS0T3Y/camo-vest.png" alt="">
+                        <div class="item-details">
+                            <span class="name">Camo Down Vest</span>
+                            <span class="price">2 * 325</span>
+                        </div>
+                    </div>
+                </div>
+                <button class="custom-button">GO TO CHECKOUT</button>
+            </div>
+        </div>
+    </div>
+    <div class="shop-page">
+        <div class="collection-page">
+          <h1 class="title">Hats</h1>
+          <div class="items">
+            <div class="collection-item">
+              <img class="image" src="https://i.ibb.co/ZYW3VTp/brown-brim.png" />
+              <div class="collection-footer">
+                <span class="name">Brown Brim</span>
+                <span class="price">25</span>
+              </div>
+              <button class="custom-button">Add to Cart</button>
+            </div>
+            <div class="collection-item">
+              <img class="image" src="https://i.ibb.co/ypkgK0X/blue-beanie.png" />
+              <div class="collection-footer">
+                <span class="name">Blue Beanie</span>
+                <span class="price">18</span>
+              </div>
+              <button class="custom-button">Add to Card</button>
+            </div>
+            <div class="collection-item">
+              <img
+                class="image"
+                src="https://i.ibb.co/QdJwgmp/brown-cowboy.png"
+              />
+              <div class="collection-footer">
+                <span class="name">Brown Cowboy</span>
+                <span class="price">35</span>
+              </div>
+              <button class="custom-button">Add to Cart</button>
+            </div>
+            <div class="collection-item">
+              <img class="image" src="https://i.ibb.co/RjBLWxB/grey-brim.png" />
+              <div class="collection-footer">
+                <span class="name">Grey Brim</span>
+                <span class="price">25</span>
+              </div>
+              <button class="custom-button">Add to Cart</button>
+            </div>
+            <div class="collection-item">
+              <img
+                class="image"
+                src="https://i.ibb.co/YTjW3vF/green-beanie.png"
+              />
+              <div class="collection-footer">
+                <span class="name">Green Beanie</span>
+                <span class="price">18</span>
+              </div>
+              <button class="custom-button">Add to Cart</button>
+            </div>
+            <div class="collection-item">
+              <img
+                class="image"
+                src="https://i.ibb.co/rKBDvJX/palm-tree-cap.png"
+              />
+              <div class="collection-footer">
+                <span class="name">Palm Tree</span>
+                <span class="price">14</span>
+              </div>
+              <button class="custom-button">Add to Cart</button>
+            </div>
+            <div class="collection-item">
+              <img class="image" src="https://i.ibb.co/bLB646Z/red-beanie.png" />
+              <div class="collection-footer">
+                <span class="name">Red Beanie</span>
+                <span class="price">18</span>
+              </div>
+              <button class="custom-button">Add to Cart</button>
+            </div>
+            <div class="collection-item">
+              <img class="image" src="https://i.ibb.co/1f2nWMM/wolf-cap.png" />
+              <div class="collection-footer">
+                <span class="name">Wolf Cap</span>
+                <span class="price">14</span>
+              </div>
+              <button class="custom-button">Add to Cart</button>
+            </div>
+            <div class="collection-item">
+              <img
+                class="image"
+                src="https://i.ibb.co/X2VJP2W/blue-snapback.png"
+              />
+              <div class="collection-footer">
+                <span class="name">Blue Snapback</span>
+                <span class="price">16</span>
+              </div>
+              <button class="custom-button">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    <script>
+        function cartToggle() {
+            p = document.querySelector('.cart-dropdown');
+            console.log('cart-dropdown', p.classList);
+            p.classList.toggle('show')
+        }
+    </script>
+</body>
+</html>
