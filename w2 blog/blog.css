@@ -1,10 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;900&family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@500;700&display=swap');
 
+/* 字體和基本樣式 */
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
+
+body {
+  background-color: #f4f4f9;
+  font-size: 16px;
+}
+
+
+a {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: crimson;
+}
+
+
 
 .body1 {
   margin: 20px auto;
@@ -41,7 +61,9 @@ h2 {
   margin-bottom: 15px;
 }
 
+
 /* navbat 樣式*/
+/*
 .navbar{
   background: rgb(3, 10, 10);
   position: relative;
@@ -105,4 +127,97 @@ font-size: 15px;
 font-weight: 500;
 margin-left: 25px;
 transition: all 0.5s ease;
+}
+*/
+
+/* navbat 樣式 修改*/
+/*2024/9/27*/
+/* 導航欄樣式 */
+.navbar {
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9));
+  width: 100%;
+  padding: 15px 0;
+  font-family: 'Ubuntu', sans-serif;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.navbar .width {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar .logo a {
+  color: #fff;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.navbar .logo a span {
+  color: #ff6363;
+  transition: color 0.3s ease;
+}
+
+.navbar .menu li {
+  list-style: none;
+  display: inline-block;
+  position: relative;
+}
+
+.navbar .menu li a {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 10px 20px;
+  transition: all 0.3s ease;
+}
+
+.navbar .menu li a:hover {
+  color: #ff6363;
+  border-bottom: 2px solid #ff6363;
+}
+
+.navbar .menu li ul {
+  position: absolute;
+  top: 50px;
+  opacity: 0;
+  visibility: hidden;
+  background: rgba(0, 0, 0, 0.9);
+  border-radius: 5px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-in-out;
+  padding: 10px 0;
+}
+
+.navbar .menu li:hover ul {
+  top: 60px;
+  opacity: 1;
+  visibility: visible;
+}
+
+.navbar .menu li ul li {
+  display: block;
+  width: 250px;
+  padding: 10px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navbar .menu li ul li:last-child {
+  border-bottom: none;
+}
+
+.navbar .menu li ul li a {
+  color: #fff;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.navbar .menu li ul li a:hover {
+  color: crimson;
 }

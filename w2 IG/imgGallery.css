@@ -1,10 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;900&family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@500;700&display=swap');
 
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
+
+body {
+  background-color: bisque;
+  font-size: 16px;
+}
+
+
+a {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: crimson;
+}
+
 
 #id909410028 {
   display: flex;
@@ -21,142 +39,111 @@ p {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: 100px;
   font-weight: 600;
-  border-bottom: 10px solid rgb(200, 235, 135);
-  padding-bottom: 30px;
-  width: 15%;
+  border-bottom: 5px solid rgba(200, 235, 135, 0.7); /* 調整底線為5px並加入透明度 */
+  padding-bottom: 15px; /* 減少底部內邊距，讓元素間距更緊湊 */
+  width: 30%;
   margin: 1.5%;
   padding-top: 100px;
 }
 
-/* navbat 樣式*/
-.navbar{
-  background: rgb(3, 10, 10);
-  position: fixed;
+
+
+/* 字體和基本樣式 */
+body {
+  background-color: #f4f4f9;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+/* 導航欄樣式 */
+.navbar {
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9));
   width: 100%;
   padding: 15px 0;
   font-family: 'Ubuntu', sans-serif;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
 }
-.navbar .width{
+
+.navbar .width {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.navbar .logo a{
+
+.navbar .logo a {
   color: #fff;
-  font-size: 35px;
-  font-weight: 600;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
-.navbar .menu li{
+
+.navbar .logo a span {
+  color: #ff6363;
+  transition: color 0.3s ease;
+}
+
+.navbar .menu li {
   list-style: none;
   display: inline-block;
-  background: rgb(3, 10, 10);
-  }
-.navbar .menu li a{
+  position: relative;
+}
+
+.navbar .menu li a {
   color: #fff;
   font-size: 18px;
   font-weight: 500;
-  margin-left: 25px;
-  transition: all 0.5s ease;
-}
-.navbar .menu li a:hover{
-  color: crimson;
-}
-.navbar .logo a span{
-  color: crimson;
+  padding: 10px 20px;
   transition: all 0.3s ease;
 }
 
-.navbar .menu li ul{
+.navbar .menu li a:hover {
+  color: #ff6363;
+  border-bottom: 2px solid #ff6363;
+}
+
+.navbar .menu li ul {
   position: absolute;
-  top: 70px;
+  top: 50px;
   opacity: 0;
   visibility: hidden;
-  transition: top .3s;
+  background: rgba(0, 0, 0, 0.9);
+  border-radius: 5px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-in-out;
+  padding: 10px 0;
 }
-.navbar .menu li:hover > ul{
-  top: 50px;
+
+.navbar .menu li:hover ul {
+  top: 60px;
   opacity: 1;
   visibility: visible;
 }
-.navbar .menu li ul li{
-  position: relative;
-  margin: 0px;
-  width: 300px;
-  float: none;
-  display: list-item;
-  border-bottom: 1px solid rgba(red);
-}
-.navbar .menu li ul li a{
-color: #fff;
-font-size: 15px;
-font-weight: 500;
-margin-left: 25px;
-transition: all 0.5s ease;
+
+.navbar .menu li ul li {
+  display: block;
+  width: 250px;
+  padding: 10px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* navbat 樣式*/
-.navbar{
-  background: rgb(3, 10, 10);
-  position: relative;
-  width: 100%;
-  padding: 15px 0;
-  font-family: 'Ubuntu', sans-serif;
+.navbar .menu li ul li:last-child {
+  border-bottom: none;
 }
-.navbar .width{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.navbar .logo a{
+
+.navbar .menu li ul li a {
   color: #fff;
-  font-size: 35px;
-  font-weight: 600;
+  font-size: 16px;
+  transition: color 0.3s ease;
 }
-.navbar .menu li{
-  list-style: none;
-  display: inline-block;
-  background: rgb(3, 10, 10);
-  }
-.navbar .menu li a{
-  color: #fff;
-  font-size: 18px;
-  font-weight: 500;
-  margin-left: 25px;
-  transition: all 0.5s ease;
-}
-.navbar .menu li a:hover{
+
+.navbar .menu li ul li a:hover {
   color: crimson;
 }
-.navbar .logo a span{
-  color: crimson;
-  transition: all 0.3s ease;
-}
-
-.navbar .menu li ul{
-  position: absolute;
-  top: 70px;
-  opacity: 0;
-  visibility: hidden;
-  transition: top .3s;
-}
-.navbar .menu li:hover > ul{
-  top: 50px;
-  opacity: 1;
-  visibility: visible;
-}
-.navbar .menu li ul li{
-  position: relative;
-  margin: 0px;
-  width: 300px;
-  float: none;
-  display: list-item;
-  border-bottom: 1px solid rgba(red);
-}
-.navbar .menu li ul li a{
-color: #fff;
-font-size: 15px;
-font-weight: 500;
-margin-left: 25px;
-transition: all 0.5s ease;
-}
-

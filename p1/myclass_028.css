@@ -1,100 +1,170 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;900&family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@500;700&display=swap');
+
+
+
+
 * {
-  margin: 0;
   padding: 0;
+  margin: 0;
   box-sizing: border-box;
 }
-.width{
-    max-width: 1300px;
-    padding: 0 80px;
-    margin: auto;}
+
+/* 去掉背景圖 */
+body {
+  background: #f5f5f5; /* 淡灰色背景 */
+  color: #333; /* 深灰色文字，適合閱讀 */
+  font-family: Arial, sans-serif;
+} 
 
 a {
-    color: #fff;
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
-.width{
-    max-width: 1300px;
-    padding: 0 80px;
-    margin: auto;
+
+a:hover {
+  color: crimson;
 }
+
+
+
+
+
+
 /* navbat 樣式*/
-.navbar{
-    background: rgb(3, 10, 10);
-    position: relative;
+  /* 導航欄樣式 */
+  .navbar {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9));
     width: 100%;
     padding: 15px 0;
     font-family: 'Ubuntu', sans-serif;
-}
-.navbar .width{
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000; /* 確保導航欄在較高層級 */
+    position: relative; /* 固定位置 */
+  }
+  
+  .navbar .width {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
-.navbar .logo a{
+  }
+  
+  .navbar .logo a {
     color: #fff;
-    font-size: 35px;
-    font-weight: 600;
-}
-.navbar .menu li{
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  
+  .navbar .logo a span {
+    color: #ff6363;
+    transition: color 0.3s ease;
+    
+  }
+  
+  .navbar .menu li {
     list-style: none;
     display: inline-block;
-    background: rgb(3, 10, 10);
-    }
-.navbar .menu li a{
+    position: relative;
+  }
+  
+  .navbar .menu li a {
     color: #fff;
     font-size: 18px;
     font-weight: 500;
-    margin-left: 25px;
-    transition: all 0.5s ease;
-}
-.navbar .menu li a:hover{
-    color: crimson;
-}
-.navbar .logo a span{
-    color: crimson;
+    padding: 10px 20px;
     transition: all 0.3s ease;
-}
-
-.navbar .menu li ul{
+  }
+  
+  .navbar .menu li a:hover {
+    color: #ff6363;
+    border-bottom: 2px solid #ff6363;
+  }
+  
+  .navbar .menu li ul {
     position: absolute;
-    top: 70px;
+    top: 50px;
     opacity: 0;
     visibility: hidden;
-    transition: top .3s;
-}
-.navbar .menu li:hover > ul{
-    top: 50px;
+    background: rgba(0, 0, 0, 0.9);
+    border-radius: 5px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;
+    padding: 10px 0;
+  }
+  
+  .navbar .menu li:hover ul {
+    top: 60px;
     opacity: 1;
     visibility: visible;
-}
-.navbar .menu li ul li{
-    position: relative;
-    margin: 0px;
-    width: 300px;
-    float: none;
-    display: list-item;
-    border-bottom: 1px solid rgba(red);
-}
-.navbar .menu li ul li a{
-color: #fff;
-font-size: 15px;
-font-weight: 500;
-margin-left: 25px;
-transition: all 0.5s ease;
-}
+  }
+  
+  .navbar .menu li ul li {
+    display: block;
+    width: 250px;
+    padding: 10px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .navbar .menu li ul li:last-child {
+    border-bottom: none;
+  }
+  
+  .navbar .menu li ul li a {
+    color: #fff;
+    font-size: 16px;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar .menu li ul li a:hover {
+    color: crimson;
+  }
+/*
 table {
     border: 5px solid black;
     position: center;
-  }
+  }*/
+
+  table {
+    
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: #fff; /* 白色背景 */
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ddd; /* 淡灰色邊框 */
+}
+
+th {
+    background-color: #eaeaea; /* 淺灰色表頭背景 */
+    color: #333; /* 深灰色文字 */
+    font-weight: bold;
+}
+
+td {
+    background-color: #fafafa; /* 非常淡的灰色 */
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9; /* 隔行變色 */
+}
 
   .container{
-    padding-top: 100px;
-  }
+    display: grid;
+    place-content: center;
+    }
 
 /* home section styling */
 .home{
-  display: flex;
-  background: url("/jimmy.jpg") no-repeat center;
+  /*background: url("/jimmy.jpg") no-repeat center;*/
   height: 100vh;
   color: rgb(12, 11, 11);
   min-height: 500px;
@@ -132,4 +202,15 @@ table {
 .home .home-content a:hover{
   color: crimson;
   background: none;
+}
+
+
+/* Footer */
+.page-footer {
+
+  display: grid;
+  place-content: center;  margin: 50px 0 20px 0;
+  color: #666;
+  font-size: 0
+  .9em;
 }
